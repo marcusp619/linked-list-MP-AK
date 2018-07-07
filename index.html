@@ -16,15 +16,41 @@
       </header>
       <section>
         <form action="">
-          <label for="website-title">
-            <input type="text">
+          <label for="website-title" aria-label="Input for website title">
+            <input type="text" placeholder="Website Title">
           </label>
           <label for="website-url">
-            <input type="text">
+            <input type="text" placeholder="Website URL" aria-label="Input for website URL">
           </label>
           <input type="submit" value="Enter">
         </form>
       </section>
+      <aside role="feed">
+        <!-- Hard Coded the results section for styling purposes
+        We will most like append these article cards with JS. -->
+        <article>
+          <h4>The Website Title</h4>
+          <p>www.thewebsiteurl.com</p>
+          <button>Read</button>
+          <button>Delete</button>
+        </article>
+        <article>
+          <h4>The Website Title</h4>
+          <p>www.thewebsiteurl.com</p>
+          <button>Read</button>
+        </article>
+        <article>
+          <h4>The Website Title</h4>
+          <p>www.thewebsiteurl.com</p>
+          <button>Read</button>
+        </article>
+        <article>
+          <h4>The Website Title</h4>
+          <p>www.thewebsiteurl.com</p>
+          <button>Read</button>
+        </article>
+        <!-- End of styling Purposes -->
+      </aside>
     </main>
 
     <script src="script.js"></script>
