@@ -7,6 +7,20 @@
 
 body {
   background-color: #455A64;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 4rem;
+  text-align: center;
+
+}
+
+h1 img {
+  height: 3rem;
+  width: auto;
 }
 
 
@@ -18,19 +32,18 @@ body {
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
   "empty aside"
-  "input-form aside"
-  "input-form aside"
+  "input-box aside"
+  "input-box aside"
   "footer aside";
 
-  height: 49rem;
 }
 
 .empty {
   grid-area: empty;
 }
 
-.input-form {
-  grid-area: input-form;
+.input-box {
+  grid-area: input-box;
 }
 
 aside {
@@ -43,4 +56,76 @@ footer {
 }
 
 /*  ------------ Modules ------------------ */
+
+.article {
+  background-color: white;
+  border: 1.5px solid #607D8B;
+  height: 10rem;
+  margin: 2rem;
+  padding: 1rem;
+  text-align: left;
+}
+
+.article button {
+  color: #455A64;
+}
+
+.article button+button {
+  float: right;
+}
+
+.article h4 {
+  color: #455A64;
+  font-size: 30px;
+  font-weight: 800;
+  padding: .2rem;
+}
+
+.article hr {
+  background-color: #CFD8DC;
+  height: 2px;
+}
+
+.article p {
+  color: #607D8B;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+  padding: 1rem;
+}
+
+
+.input-form {
+  margin: auto;
+  height: 22rem;
+}
+
+.input-form input {
+  display: block;
+  font-size: 24px;
+  margin: 3rem auto;
+  padding: .3rem;
+  width: 29rem;
+}
+
+.submit-btn {
+  background-color: #FFC107;
+  color: #FFF;
+  display: block;
+  font-size: 24px;
+  margin: 3rem auto;
+  padding: .3rem;
+  width: 29rem;
+}
+
+.submit-btn:hover {
+  background-color: #FFD773;
+  cursor: pointer;
+}
+
+
+
 /*  -------------- States ------------- */
+
+input::placeholder {
+  color: rgba(115, 115, 116, 0.3)
+}
