@@ -96,7 +96,6 @@ footer {
 
 .input-form {
   margin: auto;
-  height: 22rem;
 }
 
 .input-form input {
@@ -128,4 +127,42 @@ footer {
 
 input::placeholder {
   color: rgba(115, 115, 116, 0.3)
+}
+
+@media (max-width: 950px), (orientation: portrait) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "input-box"
+    "input-box"
+    "aside"
+    "aside";
+
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+
+  h1 img {
+    height: 1.5rem;
+    width: auto;
+  }
+
+  .input-form input {
+    display: block;
+    font-size: 24px;
+    margin: 1rem auto;
+    padding: .3rem;
+    width: 20rem;
+  }
+
+  .submit-btn {
+    width: 20rem;
+  }
+
+
 }
