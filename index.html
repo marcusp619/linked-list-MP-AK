@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <main>
+    <main class="container">
+      <div class="empty"></div>
+      <section class="input-form">
       <header>
         <h1>
-          Linked <span><img src="" alt="linked list logo"></span>List
+          Linked <span><img src="img/linked-list-logo.svg" alt="linked list logo"></span>List
         </h1>
       </header>
-      <section>
         <form action="">
           <label for="website-title" aria-label="Input for website title">
             <input type="text" placeholder="Website Title">
@@ -28,29 +29,31 @@
       <aside role="feed">
         <!-- Hard Coded the results section for styling purposes
         We will most like append these article cards with JS. -->
-        <article>
+        <article class="website-1">
           <h4>The Website Title</h4>
           <p>www.thewebsiteurl.com</p>
           <button>Read</button>
           <button>Delete</button>
         </article>
-        <article>
+        <article class="website-2">
           <h4>The Website Title</h4>
           <p>www.thewebsiteurl.com</p>
           <button>Read</button>
         </article>
-        <article>
+        <article class="website-3">
           <h4>The Website Title</h4>
           <p>www.thewebsiteurl.com</p>
           <button>Read</button>
         </article>
-        <article>
+        <article class="website-4">
           <h4>The Website Title</h4>
           <p>www.thewebsiteurl.com</p>
           <button>Read</button>
         </article>
         <!-- End of styling Purposes -->
       </aside>
+      <footer>
+      </footer>
     </main>
 
     <script src="script.js"></script>
