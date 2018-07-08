@@ -48,7 +48,9 @@ img {
     width: 5rem;
 }
 /*COULD YOU CLEAN UP THE CLASS NAMES FOR ME?
-I haven't read through the css style guide*/
+I haven't read through the css style guide
+also sorry for pushing to master i forgot to
+make a new branch*/
 .website-card {
   background: white;
   border:1px solid #607d8b;
