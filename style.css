@@ -67,6 +67,7 @@ footer {
 }
 
 .article button {
+  border: none;
   color: #455A64;
 }
 
@@ -116,17 +117,36 @@ footer {
   width: 29rem;
 }
 
-.submit-btn:hover {
-  background-color: #FFD773;
-  cursor: pointer;
-}
-
 
 
 /*  -------------- States ------------- */
 
 input::placeholder {
   color: rgba(115, 115, 116, 0.3)
+}
+
+.article button:hover {
+  cursor: pointer;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: #FFC107;
+}
+
+.article button+button:hover {
+  font-weight: 400;
+}
+
+.article p:hover {
+  color: #455A64;
+  cursor: pointer;
+  font-weight: 800;
+  text-decoration-color: #FFC107;
+
+}
+
+.submit-btn:hover {
+  background-color: #FFD773;
+  cursor: pointer;
 }
 
 @media (max-width: 950px), (orientation: portrait) {
