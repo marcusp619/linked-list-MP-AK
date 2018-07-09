@@ -1,3 +1,4 @@
+
 /* ------------ Base -------------------- */
 * {
   box-sizing: border-box;
@@ -28,6 +29,7 @@ h1 img {
 
 .container {
   display: grid;
+  grid-gap: 10px 10px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
@@ -39,7 +41,6 @@ h1 img {
 }
 
 .empty {
-  grid-area: empty;
 }
 
 .input-box {
@@ -56,7 +57,6 @@ footer {
 }
 
 /*  ------------ Modules ------------------ */
-
 .article {
   background-color: white;
   border: 1.5px solid #607D8B;
@@ -116,8 +116,6 @@ footer {
   padding: .3rem;
   width: 29rem;
 }
-
-
 
 /*  -------------- States ------------- */
 
