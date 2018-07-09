@@ -70,9 +70,10 @@ div {
 
 .article button {
   color: #455A64;
-  margin-top: 15px;
   font-size: 1.1rem;
-  /*border-bottom: 1px solid gray;*/ /*weird issue where it makes the whole button gray*/
+  margin-top: 15px;
+  text-decoration: underline;
+  text-decoration-color: #CFD8DC;
 }
 
 .article h4 {
