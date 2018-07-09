@@ -47,6 +47,7 @@ h1 img {
 aside {
   background-color: #CFD8DC;
   grid-area: aside;
+  height: 100vh;
 }
 
 footer {
