@@ -8,6 +8,20 @@
 
 body {
   background-color: #455A64;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 4rem;
+  text-align: center;
+
+}
+
+h1 img {
+  height: 3rem;
+  width: auto;
 }
 
 
@@ -19,19 +33,18 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
-  ". aside"
-  "input-form aside"
-  "input-form aside"
+  "empty aside"
+  "input-box aside"
+  "input-box aside"
   "footer aside";
 
-  height: 49rem;
 }
 
 .empty {
 }
 
-.input-form {
-  grid-area: input-form;
+.input-box {
+  grid-area: input-box;
 }
 
 aside {
@@ -44,23 +57,130 @@ footer {
 }
 
 /*  ------------ Modules ------------------ */
-img {
-    width: 5rem;
+.article {
+  background-color: white;
+  border: 1.5px solid #607D8B;
+  height: 10rem;
+  margin: 2rem;
+  padding: 1rem;
+  text-align: left;
 }
-/*COULD YOU CLEAN UP THE CLASS NAMES FOR ME?
-I haven't read through the css style guide
-also sorry for pushing to master i forgot to
-make a new branch*/
-.website-card {
-  background: white;
-  border:1px solid #607d8b;
-  margin: 1rem;
+
+.article button {
+  border: none;
+  color: #455A64;
+}
+
+.article button+button {
+  float: right;
+}
+
+.article h4 {
+  color: #455A64;
+  font-size: 30px;
+  font-weight: 800;
+  padding: .2rem;
+}
+
+.article hr {
+  background-color: #CFD8DC;
+  height: 2px;
+}
+
+.article p {
+  color: #607D8B;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
   padding: 1rem;
 }
 
-.website-card h4, p {
-    border-bottom: 1px solid #607d8b;
-    padding-bottom: .6rem;
-    margin-bottom: 1rem;
+
+.input-form {
+  margin: auto;
 }
+
+.input-form input {
+  display: block;
+  font-size: 24px;
+  margin: 3rem auto;
+  padding: .3rem;
+  width: 29rem;
+}
+
+.submit-btn {
+  background-color: #FFC107;
+  color: #FFF;
+  display: block;
+  font-size: 24px;
+  margin: 3rem auto;
+  padding: .3rem;
+  width: 29rem;
+}
+
 /*  -------------- States ------------- */
+
+input::placeholder {
+  color: rgba(115, 115, 116, 0.3)
+}
+
+.article button:hover {
+  cursor: pointer;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: #FFC107;
+}
+
+.article button+button:hover {
+  font-weight: 400;
+}
+
+.article p:hover {
+  color: #455A64;
+  cursor: pointer;
+  font-weight: 800;
+  text-decoration-color: #FFC107;
+
+}
+
+.submit-btn:hover {
+  background-color: #FFD773;
+  cursor: pointer;
+}
+
+@media (max-width: 950px), (orientation: portrait) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "input-box"
+    "input-box"
+    "aside"
+    "aside";
+
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+
+  h1 img {
+    height: 1.5rem;
+    width: auto;
+  }
+
+  .input-form input {
+    display: block;
+    font-size: 24px;
+    margin: 1rem auto;
+    padding: .3rem;
+    width: 26rem;
+  }
+
+  .submit-btn {
+    width: 26rem;
+  }
+
+
+}

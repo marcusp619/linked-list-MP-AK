@@ -5,52 +5,61 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Linked List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main class="container">
       <div class="empty"></div>
-      <section class="input-form">
+      <section class="input-box">
       <header>
         <h1>
-          Linked <span><img src="img/linked-list-logo.svg" alt="linked list logo"></span>List
+          Linked <span><img src="img/linked-list-logo.svg" alt="linked list logo"></span> List
         </h1>
       </header>
-        <form action="">
+        <form action="" class="input-form">
           <label for="website-title" aria-label="Input for website title">
             <input type="text" placeholder="Website Title">
           </label>
           <label for="website-url">
             <input type="text" placeholder="Website URL" aria-label="Input for website URL">
           </label>
-          <input type="submit" value="Enter">
+          <!-- <input class="submit-btn" type="submit" value="Enter"> -->
+          <button class="submit-btn" type="submit">Enter</button>
         </form>
       </section>
       <aside role="feed">
-        <!-- Hard Coded the results section for styling purposes
-        We will most like append these article cards with JS. -->
-        <article class="website-card">
+        <article class="article website-1">
           <h4>The Website Title</h4>
+          <hr>
           <p>www.thewebsiteurl.com</p>
+          <hr>
           <button>Read</button>
           <button>Delete</button>
         </article>
-        <article class="website-card">
+        <article class="article website-2">
           <h4>The Website Title</h4>
+          <hr>
           <p>www.thewebsiteurl.com</p>
+          <hr>
           <button>Read</button>
           <button>Delete</button>
         </article>
-        <article class="website-card">
+        <article class="article website-3">
           <h4>The Website Title</h4>
+          <hr>
           <p>www.thewebsiteurl.com</p>
+          <hr>
           <button>Read</button>
           <button>Delete</button>
         </article>
-        <article class="website-card">
+        <article class="article website-4">
           <h4>The Website Title</h4>
+          <hr>
           <p>www.thewebsiteurl.com</p>
+          <hr>
           <button>Read</button>
+          <button>Delete</button>
         </article>
         <!-- End of styling Purposes -->
       </aside>
