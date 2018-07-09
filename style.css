@@ -69,13 +69,20 @@ footer {
   color: #455A64;
 }
 
-.article button+button {
-  float: right;
+div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article button {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid gray;
 }
 
 .article h4 {
   color: #455A64;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 800;
   padding: .2rem;
 }
@@ -89,7 +96,7 @@ footer {
   color: #607D8B;
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 
@@ -146,8 +153,18 @@ input::placeholder {
 }
 
 @media (max-width: 950px), (orientation: portrait) {
+  .article {
+    text-align: left;
+    margin: .7rem;
+  }
+  .article h4 {
+    font-size: 1.3rem
+  }
+
+
   .container {
     display: grid;
+    justify-content: center;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
@@ -173,11 +190,11 @@ input::placeholder {
     font-size: 24px;
     margin: 1rem auto;
     padding: .3rem;
-    width: 26rem;
+    width: 18rem;
   }
 
   .submit-btn {
-    width: 26rem;
+    width: 18rem;
   }
 
 
