@@ -47,7 +47,6 @@ h1 img {
 aside {
   background-color: #CFD8DC;
   grid-area: aside;
-  height: 100%;
 }
 
 footer {
@@ -64,20 +63,16 @@ footer {
   text-align: left;
 }
 
-.article button {
-  border: none;
-  color: #455A64;
-}
-
 div {
   display: flex;
   justify-content: space-between;
 }
 
 .article button {
+  color: #455A64;
   margin-top: 15px;
   font-size: 1.1rem;
-  border-bottom: 1px solid gray;
+  /*border-bottom: 1px solid gray;*/ /*weird issue where it makes the whole button gray*/
 }
 
 .article h4 {
@@ -99,7 +94,6 @@ div {
   padding: 1rem 0;
 }
 
-
 .input-form {
   margin: auto;
 }
@@ -114,6 +108,7 @@ div {
 
 .submit-btn {
   background-color: #FFC107;
+  border: none;
   color: #FFF;
   display: block;
   font-size: 24px;
