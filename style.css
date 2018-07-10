@@ -147,6 +147,10 @@ input::placeholder {
 
 }
 
+.read {
+  color: red !important;
+}
+
 .submit-btn:hover {
   background-color: #FFD773;
   cursor: pointer;
