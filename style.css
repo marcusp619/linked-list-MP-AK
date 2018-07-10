@@ -107,7 +107,7 @@ div {
 }
 
 .submit-btn {
-  background-color: #FFC107;
+  background-color: #ffd706;
   border: none;
   color: #FFF;
   display: block;
@@ -142,6 +142,12 @@ input::placeholder {
   font-weight: 800;
   text-decoration-color: #FFC107;
 
+}
+
+.error-msg {
+  color: #ffd706;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .read {
