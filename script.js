@@ -9,8 +9,10 @@ function addArticle() {
 function checkInputs () {
   if (websiteTitle.value === '' || websiteURL.value === '' ){
     errorMsg.innerText = 'Input fields are empty';
+
   } else {
-      addArticle();
+      enterBtn.disabled = false;
+      errorMsg.innerText = '';
   }
 }
 
@@ -21,17 +23,25 @@ function removeElement() {
 var enterBtn = document.querySelector('#submit-btn-js');
 var asideElement = document.querySelector('aside');
 var errorMsg = document.querySelector('.error-msg');
+var inputBox = document.querySelector('.input-box');
 var websiteTitle = document.querySelector('#website-title-js');
 var websiteURL = document.querySelector('#website-url-js');
 
-enterBtn.addEventListener('click', function(event) {
+enterBtn.disabled = true;
 
+enterBtn.addEventListener('click', function(event) {
   event.preventDefault();
-  checkInputs();
+    addArticle();
 
 });
 
-asideElement.addEventListener('click', function() {
+inputBox.addEventListener('keyup', function (event) {
+  if (event.target.classList.contains('input-area')) {
+    checkInputs();
+  }
+})
+
+asideElement.addEventListener('click', function(event) {
   if (event.target.classList.contains('read-btn')) {
     event.target.classList.toggle('read');
   } else if (event.target.className === 'delete-btn') {
