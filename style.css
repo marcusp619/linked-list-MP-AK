@@ -94,6 +94,11 @@ div {
   border-bottom: 1px solid #CFD8DC;
 }
 
+.footer {
+  color: #ffd706;
+  text-align: center;
+}
+
 .input-form {
   margin: auto;
 }
@@ -159,6 +164,10 @@ input::placeholder {
   cursor: pointer;
 }
 
+.submit-btn:disabled {
+  background-color: #674e11;
+}
+
 @media (max-width: 950px), (orientation: portrait) {
   .article {
     text-align: left;
@@ -173,11 +182,10 @@ input::placeholder {
     display: grid;
     justify-content: center;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 20rem 3rem 1fr;
     grid-template-areas:
     "input-box"
-    "input-box"
-    "aside"
+    "footer"
     "aside";
 
   }
@@ -190,6 +198,11 @@ input::placeholder {
   h1 img {
     height: 1.5rem;
     width: auto;
+  }
+
+  .footer {
+    color: #ffd706;
+    text-align: center;
   }
 
   .input-form input {
