@@ -1,7 +1,7 @@
 function addArticle() {
   var newArticle = document.createElement('article');
   newArticle.classList.add('article');
-  newArticle.innerHTML = `<h4>${websiteTitle.value}</h4><hr><p>${websiteURL.value}</p><hr><div><button class="read-btn">Read</button><button class="delete-btn" onclick="removeElement()">Delete</button></div>`;  
+  newArticle.innerHTML = `<h4>${websiteTitle.value}</h4><hr><p>${websiteURL.value}</p><hr><div><button class="read-btn">Read</button><button class="delete-btn" onclick="removeElement()">Delete</button></div>`;
   asideElement.appendChild(newArticle);
   var deleteBtn = document.querySelector('.delete-btn');
 }
@@ -20,5 +20,3 @@ enterBtn.addEventListener('click', function() {
   event.preventDefault();
   addArticle()
 });
-
-
