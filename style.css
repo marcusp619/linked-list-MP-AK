@@ -85,16 +85,13 @@ div {
   padding: .2rem;
 }
 
-.article hr {
-  background-color: #CFD8DC;
-  height: 2px;
-}
-
 .article p {
   color: #607D8B;
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
   padding: 1rem 0;
+  border-top:1px solid #CFD8DC;
+  border-bottom: 1px solid #CFD8DC;
 }
 
 .input-form {
