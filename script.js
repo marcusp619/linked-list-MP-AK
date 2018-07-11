@@ -27,10 +27,12 @@ function updateLinks () {
   linkRead.innerText = 'Unread: ' + readBtn;
 }
 
+
 var linkCount = 0;
 var enterBtn = document.querySelector('#submit-btn-js');
 var asideElement = document.querySelector('aside');
 var errorMsg = document.querySelector('.error-msg');
+var inputBox = document.querySelector('.input-box');
 var linkRead = document.querySelector('#read-count-js');
 var linkTotal = document.querySelector('#total-count-js');
 var websiteTitle = document.querySelector('#website-title-js');
@@ -43,10 +45,23 @@ enterBtn.addEventListener('click', function(event) {
   checkInputs();
   updateLinks();
 
-
 });
 
-asideElement.addEventListener('click', function() {
+inputBox.addEventListener('keyup', function (event) {
+  if (event.target.classList.contains('input-fields')) {
+    buttonToggle();
+  }
+})
+
+function buttonToggle () {
+  if (websiteTitle.value === '' || websiteURL.value === '' ) {
+    enterBtn.disabled = true;
+  } else {
+    enterBtn.disabled = false;
+  }
+}
+
+asideElement.addEventListener('click', function(event) {
   if (event.target.classList.contains('read-btn')) {
     event.target.classList.toggle('read');
     updateLinks();
