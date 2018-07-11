@@ -9,8 +9,11 @@ function addArticle() {
 function checkInputs () {
   if (websiteTitle.value === '' || websiteURL.value === '' ){
     errorMsg.innerText = 'Input fields are empty';
+    // enterBtn.disabled = true;
   } else {
       addArticle();
+      linkCount++;
+      linkTotal.innerText = 'Total Links: ' + linkCount;
   }
 }
 
@@ -18,22 +21,35 @@ function removeElement() {
   event.target.parentNode.parentNode.remove("article");
 }
 
+function updateLinks () {
+  var readBtn = document.querySelectorAll('.read');
+  readBtn = linkCount - readBtn.length;
+  linkRead.innerText = 'Unread: ' + readBtn;
+}
+
+var linkCount = 0;
 var enterBtn = document.querySelector('#submit-btn-js');
 var asideElement = document.querySelector('aside');
 var errorMsg = document.querySelector('.error-msg');
+var linkRead = document.querySelector('#read-count-js');
+var linkTotal = document.querySelector('#total-count-js');
 var websiteTitle = document.querySelector('#website-title-js');
 var websiteURL = document.querySelector('#website-url-js');
+
 
 enterBtn.addEventListener('click', function(event) {
 
   event.preventDefault();
   checkInputs();
+  updateLinks();
+
 
 });
 
 asideElement.addEventListener('click', function() {
   if (event.target.classList.contains('read-btn')) {
     event.target.classList.toggle('read');
+    updateLinks();
   } else if (event.target.className === 'delete-btn') {
     removeElement();
   }
