@@ -6,6 +6,14 @@ function addArticle() {
   var deleteBtn = document.querySelector('.delete-btn');
 }
 
+function buttonToggle () {
+  if (websiteTitle.value === '' || websiteURL.value === '' ) {
+    enterBtn.disabled = true;
+  } else {
+    enterBtn.disabled = false;
+  }
+}
+
 function checkInputs () {
   if (websiteTitle.value === '' || websiteURL.value === '' ){
     errorMsg.innerText = 'Input fields are empty';
@@ -52,14 +60,6 @@ inputBox.addEventListener('keyup', function (event) {
     buttonToggle();
   }
 })
-
-function buttonToggle () {
-  if (websiteTitle.value === '' || websiteURL.value === '' ) {
-    enterBtn.disabled = true;
-  } else {
-    enterBtn.disabled = false;
-  }
-}
 
 asideElement.addEventListener('click', function(event) {
   if (event.target.classList.contains('read-btn')) {
