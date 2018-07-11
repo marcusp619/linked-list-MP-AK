@@ -49,6 +49,7 @@ var websiteURL = document.querySelector('#website-url-js');
 
 enterBtn.addEventListener('click', function(event) {
 
+enterBtn.addEventListener('click', function(event) {
   event.preventDefault();
   checkInputs();
   updateLinks();
