@@ -1,3 +1,14 @@
+var linkCount = 0;
+var asideElement = document.querySelector('aside');
+var clearBtn = document.querySelector('#clear-btn-js');
+var errorMsg = document.querySelector('.error-msg');
+var enterBtn = document.querySelector('#submit-btn-js');
+var inputBox = document.querySelector('.input-box');
+var linkRead = document.querySelector('#read-count-js');
+var linkTotal = document.querySelector('#total-count-js');
+var websiteTitle = document.querySelector('#website-title-js');
+var websiteURL = document.querySelector('#website-url-js');
+
 function addArticle() {
   var newArticle = document.createElement('article');
   newArticle.classList.add('article');
@@ -28,7 +39,6 @@ function clearBookmarks() {
   linkTotal.innerText = 'Total Links: ' + 0;
   linkRead.innerText = 'Unread: ' + 0;
   linkCount = 0;
-
 }
 
 function removeElement() {
@@ -57,23 +67,12 @@ function checkURL(str) {
   }
 }
 
-var linkCount = 0;
-var enterBtn = document.querySelector('#submit-btn-js');
-var clearBtn = document.querySelector('#clear-btn-js');
-var asideElement = document.querySelector('aside');
-var errorMsg = document.querySelector('.error-msg');
-var inputBox = document.querySelector('.input-box');
-var linkRead = document.querySelector('#read-count-js');
-var linkTotal = document.querySelector('#total-count-js');
-var websiteTitle = document.querySelector('#website-title-js');
-var websiteURL = document.querySelector('#website-url-js');
-
-
-enterBtn.addEventListener('click', function(event) {
-  event.preventDefault();
-  if (checkURL(websiteURL.value)) {
-    addArticle();
+asideElement.addEventListener('click', function(event) {
+  if (event.target.classList.contains('read-btn')) {
+    event.target.classList.toggle('read');
     updateLinks();
+  } else if (event.target.className === 'delete-btn') {
+    removeElement();
   }
 });
 
@@ -84,17 +83,16 @@ clearBtn.addEventListener('click', function(event) {
   buttonToggle();
 });
 
-inputBox.addEventListener('keyup', function (event) {
-  if (event.target.classList.contains('input-fields')) {
-    buttonToggle();
+enterBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  if (checkURL(websiteURL.value)) {
+    addArticle();
+    updateLinks();
   }
 });
 
-asideElement.addEventListener('click', function(event) {
-  if (event.target.classList.contains('read-btn')) {
-    event.target.classList.toggle('read');
-    updateLinks();
-  } else if (event.target.className === 'delete-btn') {
-    removeElement();
+inputBox.addEventListener('keyup', function (event) {
+  if (event.target.classList.contains('input-fields')) {
+    buttonToggle();
   }
 });
