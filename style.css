@@ -31,7 +31,7 @@ h1 img {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas:
-  ". aside"
+  "input-box aside"
   "input-box aside"
   "input-box aside"
   "footer aside";
@@ -39,12 +39,13 @@ h1 img {
 
 .input-box {
   grid-area: input-box;
+  padding: 13rem 0;
 }
 
 aside {
   background-color: #CFD8DC;
   grid-area: aside;
-  height: 100vh;
+  height: 100%;
 }
 
 footer {
